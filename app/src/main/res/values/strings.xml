@@ -2,4 +2,5 @@
     <string name="app_name">TestKotlin</string>
     <string name="hint_email_login">Email</string>
     <string name="log_button">Next</string>
+    <string name="error_message">invalid email</string>
 </resources>
