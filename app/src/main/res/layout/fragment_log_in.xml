@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorCustom">
+
+    <androidx.constraintlayout.widget.Guideline
+
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
 
     <ImageView
         android:id="@+id/logo_image"
@@ -21,13 +30,20 @@
 
         app:srcCompat="@drawable/icon_mblogo"/>
 
-    <androidx.constraintlayout.widget.Guideline
 
-        android:id="@+id/guideline"
+    <TextView
+        android:id="@+id/user_name_field"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+
+        android:layout_marginTop="21dp"
+        android:text="@string/user_name"
+
+        style="@style/general_text_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -35,25 +51,25 @@
         android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+
         android:textColorHint="@color/colorText"
 
         app:errorTextAppearance="@style/hint_error"
         app:hintTextAppearance="@style/my_hint_text"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image">
+        app:layout_constraintTop_toBottomOf="@+id/user_name_field">
 
         <com.google.android.material.textfield.TextInputEditText
 
             style="@style/input_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/hint_email_login"
+            android:hint="@string/password_field"
             android:minHeight="45dp"
-            android:paddingStart="8dp" />
+            android:paddingStart="8dp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,12 +84,34 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="16dp"
 
-        android:text="@string/log_button"
+        android:text="@string/button_login"
         android:textAlignment="center"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/container_spinner" />
+
+    <LinearLayout
+        android:id="@+id/container_spinner"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/spinner_style"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:spinnerMode="dropdown"
+            android:entries="@array/users"/>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

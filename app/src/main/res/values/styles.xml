@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="button_next" parent="Widget.AppCompat.Button">
+    <style name="button_style" parent="Widget.AppCompat.Button">
 
         <item name="android:textSize">15dp</item>
         <item name="android:textColor">@color/colorText</item>
@@ -19,23 +19,49 @@
 
     </style>
 
-    <style name="my_hint_text" parent="TextAppearance.AppCompat.Small">
+    <style name="general_text_style" parent="Widget.AppCompat.TextView">
 
+        <item name="android:textSize">20dp</item>
         <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/ubuntu_m</item>
 
     </style>
-    <style name="error_text" parent="TextAppearance.AppCompat.Small">
 
+    <style name="my_hint_text" parent="TextAppearance.Design.Hint">
+
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/ubuntu_m</item>
+
+    </style>
+
+    <style name="hint_error" parent="TextAppearance.Design.Hint">
+
+        <item name="android:background">@drawable/shape_error</item>
         <item name="android:textColor">@color/colorError</item>
+        <item name="android:fontFamily">@font/ubuntu_m</item>
+        <item name="android:textSize">12dp</item>
 
     </style>
 
-    <style name="input_email" parent="TextAppearance.AppCompat">
 
+
+    <style name="input_email" parent="Widget.AppCompat.EditText">
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
         <item name="android:textColor">@color/colorText</item>
         <item name="android:textSize">15dp</item>
         <item name="android:fontFamily">@font/ubuntu_m</item>
         <item name="android:background">@drawable/shape</item>
+
+    </style>
+
+    <style name="spinner_style" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+
+    <item name="android:textColor">@color/colorText</item>
+    <item name="android:textSize">15dp</item>
+    <item name="android:fontFamily">@font/ubuntu_m</item>
+    <item name="android:background">@drawable/shape</item>
+    <item name="android:text">@string/text_role</item>
 
     </style>
 
