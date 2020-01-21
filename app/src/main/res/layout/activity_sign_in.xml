@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
 
-        app:srcCompat="@drawable/icon_mblogo"/>
+        app:srcCompat="@drawable/icon_mblogo" />
 
     <androidx.constraintlayout.widget.Guideline
 
@@ -37,29 +37,30 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="67dp"
         android:layout_marginEnd="16dp"
+        android:focusableInTouchMode="true"
         android:textColorHint="@color/colorText"
-
+        
         app:errorTextAppearance="@style/hint_error"
-        app:hintTextAppearance="@style/my_hint_text"
-
+        app:hintTextAppearance="@style/hint_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_image">
 
         <com.google.android.material.textfield.TextInputEditText
-
-            style="@style/input_email"
+            android:id="@+id/email_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/hint_email_login"
             android:minHeight="45dp"
-            android:paddingStart="8dp" />
+            android:paddingStart="8dp"
+
+            style="@style/input_email"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+
         android:id="@+id/next_button"
-        style="@style/button_style"
 
         android:layout_width="0dp"
         android:layout_height="45dp"
@@ -73,7 +74,8 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        style="@style/button_style"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

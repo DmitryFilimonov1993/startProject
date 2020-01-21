@@ -30,23 +30,30 @@
     <style name="my_hint_text" parent="TextAppearance.Design.Hint">
 
         <item name="android:textSize">12dp</item>
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorText</item>
         <item name="android:fontFamily">@font/ubuntu_m</item>
 
     </style>
 
-    <style name="hint_error" parent="TextAppearance.Design.Hint">
+    <style name="hint_error" parent="TextAppearance.AppCompat">
 
-        <item name="android:background">@drawable/shape_error</item>
         <item name="android:textColor">@color/colorError</item>
         <item name="android:fontFamily">@font/ubuntu_m</item>
         <item name="android:textSize">12dp</item>
 
     </style>
 
+    <style name="hint_text" parent="TextAppearance.AppCompat">
+
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/ubuntu_m</item>
+        <item name="android:textSize">12dp</item>
+
+    </style>
 
 
     <style name="input_email" parent="Widget.AppCompat.EditText">
+
         <item name="android:textCursorDrawable">@drawable/color_cursor</item>
         <item name="android:textColor">@color/colorText</item>
         <item name="android:textSize">15dp</item>
@@ -64,6 +71,9 @@
     <item name="android:text">@string/text_role</item>
 
     </style>
+
+
+
 
 
 </resources>
