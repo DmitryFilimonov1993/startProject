@@ -48,13 +48,16 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_input"
+            style="@style/input_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/hint_email_login"
-            android:minHeight="45dp"
+            android:minHeight="50dp"
             android:paddingStart="8dp"
+            android:paddingTop="5dp"
 
-            style="@style/input_email"/>
+
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
