@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="gap_from_ed_text"> 5dp </dimen>
+    <dimen name="gap_from_ed_text"> 7dp </dimen>
 
 </resources>

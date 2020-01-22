@@ -75,6 +75,8 @@
         <item name="android:fontFamily">@font/ubuntu_m</item>
         <item name="android:background">@drawable/bg_dimen</item>
         <item name="android:hint">@string/hint_email_login</item>
+        <item name="android:inputType">textEmailAddress|textVisiblePassword</item>
+        <item name="android:minHeight">50dp</item>
 
     </style>
 
@@ -82,8 +84,6 @@
 
     <item name="android:textColor">@color/white</item>
     <item name="android:textSize">15dp</item>
-
-
 
     </style>
     <style name="spinner_theme" parent="android:Widget.Spinner">
