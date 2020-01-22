@@ -7,6 +7,10 @@
         <item name="colorPrimaryDark">@color/colorCustom</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="style_log_in" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="android:icon">@drawable/icon_back_sign_in</item>
+    </style>
 
     <style name="button_style" parent="Widget.AppCompat.Button">
 
@@ -66,10 +70,15 @@
 
     <item name="android:textColor">@color/colorText</item>
     <item name="android:textSize">15dp</item>
-    <item name="android:fontFamily">@font/ubuntu_m</item>
-    <item name="android:background">@drawable/shape</item>
-    <item name="android:text">@string/text_role</item>
 
+
+
+    </style>
+    <style name="spinner_theme" parent="android:Widget.Spinner">
+        <item name="android:drawableRight">@drawable/icon_drop_down</item>
+        <item name="android:fontFamily">@font/ubuntu_m</item>
+        <item name="android:background">@drawable/shape</item>
+        <item name="android:text">@string/text_role</item>
     </style>
 
 

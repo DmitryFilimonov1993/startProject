@@ -54,7 +54,7 @@
             android:hint="@string/hint_email_login"
             android:minHeight="50dp"
             android:paddingStart="8dp"
-            android:paddingTop="5dp"
+            android:paddingTop="@dimen/gap_from_ed_text"
 
 
             />

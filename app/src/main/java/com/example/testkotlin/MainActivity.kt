@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.fragment_log_in)
 
 //        val spinner : Spinner = findViewById(R.id.spinner)
 //        ArrayAdapter.createFromResource(this,R.array.users,android.R.layout.simple_spinner_item).also {

@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     android:background="@color/colorCustom">
 
+
+    <View
+        android:id="@+id/icon_back"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/icon_back_sign_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="21dp"
+        android:layout_width="12dp"
+        android:padding="10dp"/>
+
     <androidx.constraintlayout.widget.Guideline
 
         android:id="@+id/guideline"
@@ -55,12 +67,14 @@
         android:layout_marginEnd="16dp"
 
         android:textColorHint="@color/colorText"
-
+        android:focusableInTouchMode="true"
         app:errorTextAppearance="@style/hint_error"
-        app:hintTextAppearance="@style/my_hint_text"
+        app:hintTextAppearance="@style/hint_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name_field">
+        app:layout_constraintTop_toBottomOf="@+id/user_name_field"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorText">
 
         <com.google.android.material.textfield.TextInputEditText
 
@@ -68,8 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/password_field"
-            android:minHeight="45dp"
-            android:paddingStart="8dp"/>
+            android:minHeight="50dp"
+            android:paddingStart="8dp"
+            android:paddingTop="@dimen/gap_from_ed_text"
+            android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,11 +121,12 @@
 
         <Spinner
             android:id="@+id/spinner"
-            style="@style/spinner_style"
+            style="@style/spinner_theme"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:spinnerMode="dropdown"
-            android:entries="@array/users"/>
+            android:entries="@array/users"
+            />
 
     </LinearLayout>
 
