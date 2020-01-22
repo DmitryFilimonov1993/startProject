@@ -12,11 +12,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-//        val layout: TextInputLayout = findViewById(R.id.textInputLayout)
-//        layout.setAnError("Pizdec, vse slomalos", R.drawable.shape_error)
-//        Handler().postDelayed({
-//            layout.hideAnError(R.drawable.shape)
-//        }, 7000)
+        val layout: TextInputLayout = findViewById(R.id.textInputLayout)
+
+        layout.setAnError("Pizdec, vse slomalos", R.drawable.bg_dimen_error)
+        Handler().postDelayed({
+            layout.hideAnError(R.drawable.bg_dimen)
+        }, 7000)
 
 //       val spinner : Spinner = findViewById(R.id.spinner)
 //        ArrayAdapter.createFromResource(this,R.array.users,android.R.layout.simple_spinner_item).also {
