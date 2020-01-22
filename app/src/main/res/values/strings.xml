@@ -3,7 +3,6 @@
     <string name="hint_email_login">Email</string>
     <string name="log_button">Next</string>
     <string name="error_message">invalid email</string>
-    <string name="user_name">dmitry.filimonov@mbicycle.com</string>
     <string name="button_login">Login</string>
     <string name="password_field">Password</string>
     <string name="text_role">Role</string>

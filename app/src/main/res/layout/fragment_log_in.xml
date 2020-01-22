@@ -8,16 +8,15 @@
     android:background="@color/colorCustom">
 
 
-    <View
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icon_back"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/icon_back_sign_in"
+        android:padding="16dp"
+        app:srcCompat="@drawable/icon_back_sign_in"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="21dp"
-        android:layout_width="12dp"
-        android:padding="10dp"/>
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
 
     <androidx.constraintlayout.widget.Guideline
 
@@ -28,7 +27,7 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <ImageView
-        android:id="@+id/logo_image"
+        android:id="@+id/iconLogo"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,22 +39,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
 
-        app:srcCompat="@drawable/icon_mblogo"/>
+        app:srcCompat="@drawable/icon_mbicycle_logo"/>
 
 
     <TextView
         android:id="@+id/user_name_field"
 
-        android:layout_width="wrap_content"
+        style="@style/white_text_style"
+        android:layout_width="0dp"
+
         android:layout_height="wrap_content"
-
         android:layout_marginTop="21dp"
-        android:text="@string/user_name"
+        android:gravity="start"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
 
-        style="@style/general_text_style"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+        app:layout_constraintTop_toBottomOf="@+id/iconLogo"
+        tools:text="dmitry.filimonov@mbicycle.com" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -66,7 +68,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
 
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/white"
         android:focusableInTouchMode="true"
         app:errorTextAppearance="@style/hint_error"
         app:hintTextAppearance="@style/hint_text"
@@ -74,7 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_name_field"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/colorText">
+        app:passwordToggleTint="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
 
