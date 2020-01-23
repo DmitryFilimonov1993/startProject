@@ -1,5 +1,6 @@
 package com.example.testkotlin
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,11 +16,12 @@ class CustomAdapter(var items: List<UserRole>) : RecyclerView.Adapter<CustomAdap
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        val role = itemView.findViewById<AppCompatTextView>(R.id.textRole)
+        var role : AppCompatTextView? = null
 
-        fun bind(item: UserRole){
-            role.text = item.role
+        init {
+            role = itemView.findViewById(R.id.textRole)
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ViewHolder{
@@ -37,7 +39,7 @@ class CustomAdapter(var items: List<UserRole>) : RecyclerView.Adapter<CustomAdap
         // get element from your dataset at this position
         // replace the contents of the view with that element
 
-        holder.bind(items[position])
+        holder.role?.text = items[position].role
     }
 
     override fun getItemCount() = items.size

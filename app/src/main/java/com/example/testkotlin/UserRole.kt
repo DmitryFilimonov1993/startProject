@@ -1,5 +1,5 @@
 package com.example.testkotlin
 
-class UserRole(val role: String) {
+class UserRole(var role: String) {
 
 }

@@ -16,6 +16,5 @@
         android:paddingTop="10dp"
         android:paddingStart="15dp"
         android:paddingBottom="10dp"
-
-        android:text="TextView" />
+        />
 </LinearLayout>

@@ -9,15 +9,29 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var recyclerView: RecyclerView
-    lateinit var viewAdapter: RecyclerView.Adapter<*>
-    lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_log_in)
+        setContentView(R.layout.test_recycler)
 
-        viewManager = LinearLayoutManager(this)
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = CustomAdapter(init)
+
+
+ fun init() : List<UserRole> {
+            val items = listOf(
+                UserRole("Admin"),
+                UserRole("Manager"),
+                UserRole("Developer"),
+                UserRole("Petr")
+
+            )
+            return items
+        }
+
+
+
 
 
 
