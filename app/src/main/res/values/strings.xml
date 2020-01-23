@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">TestKotlin</string>
+
     <string name="hint_email_login">Email</string>
     <string name="log_button">Next</string>
-    <string name="error_message">invalid email</string>
+    <string name="error_message">Invalid email</string>
+    <string name="empty_field_password">Pleas, enter password</string>
+    <string name="error_password">Invalid password</string>
     <string name="button_login">Login</string>
     <string name="password_field">Password</string>
     <string name="text_role">Role</string>
-
 
     <string-array name="users">
         <item>User1</item>

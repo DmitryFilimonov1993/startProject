@@ -24,6 +24,10 @@
 
         android:padding="16dp"
 
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+
         app:srcCompat="@drawable/icon_back_sign_in"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -70,7 +74,7 @@
         tools:text="dmitry.filimonov@mbicycle.com" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/textInputLayoutLogIn"
 
         style="@style/style_input_text_layout"
 
@@ -102,38 +106,54 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/next_button"
-        style="@style/button_style"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutChooseRole"
 
+        style="@style/style_input_text_layout"
+
+        android:layout_height="wrap_content"
         android:layout_width="0dp"
-        android:layout_height="45dp"
 
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
 
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLogIn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRole"
+
+            style="@style/style_choose_role_edit"
+
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+
+            android:paddingEnd="13dp"
+            android:paddingStart="8dp"
+            android:paddingTop="@dimen/gap_from_ed_text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+
+        style="@style/button_style"
+
+        android:layout_height="45dp"
+        android:layout_width="0dp"
+
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+
         android:text="@string/button_login"
-        android:textAlignment="center"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        style="@style/spinner_theme"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:entries="@array/users"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutChooseRole" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

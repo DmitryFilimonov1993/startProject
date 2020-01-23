@@ -40,7 +40,7 @@
         app:layout_constraintGuide_percent="0.25" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/textInputLayoutSignIn"
 
         style="@style/style_input_text_layout"
 
@@ -63,6 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
+            android:paddingEnd="8dp"
             android:paddingStart="8dp"
             android:paddingTop="@dimen/gap_from_ed_text" />
 
@@ -84,7 +85,7 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
