@@ -1,6 +1,16 @@
 package com.example.testkotlin
 
+import android.content.Context
+import android.graphics.ColorFilter
+import android.graphics.PixelFormat
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.WindowManager
+import android.widget.LinearLayout
+import android.widget.PopupMenu
+import android.widget.PopupWindow
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
@@ -18,8 +28,55 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_log_in)
 
-        var color = ResourcesCompat.getColor(resources, R.color.orange, null)
-        iconBack.setColorFilter(color)
+        fun initList():List<UserRole>{
+            val items = listOf(
+                UserRole("Admin"),
+                UserRole("Manager"),
+                UserRole("Developer"),
+                UserRole("Developer"),
+                UserRole("Dima"),
+                UserRole("Ilya"),
+                UserRole("Maxim"),
+                UserRole("Natalya"),
+                UserRole("Tany"),
+                UserRole("Arnold"),
+                UserRole("dave"),
+                UserRole("Trata"),
+                UserRole("Cran"),
+                UserRole("Cfa"),
+                UserRole("Andrey"),
+                UserRole("Stepan"),
+                UserRole("Petr"))
+            return items
+        }
+
+        fun getPixel(dp: Int):Int{
+            return dp* resources.displayMetrics.density as Int
+        }
+
+//        recyclerView.addItemDecoration(itemDecor)
+
+
+
+        loginButton.setOnClickListener {
+
+
+
+            val window = PopupWindow(this)
+
+
+
+            window.init(this, initList())
+
+            window.width = resources.getDimensionPixelSize(R.dimen.pop_up_width)
+            window.height = resources.getDimensionPixelSize(R.dimen.pop_up_height)
+
+
+            window.showAsDropDown(editRole)
+            //window.showAsDropDown(editRole)
+}
+
+
 
 //        editRole.setOnClickListener {  }
 //
@@ -31,10 +88,7 @@ class MainActivity : AppCompatActivity() {
 //        }
 //        val itemDecor = DividerItemDecoration(baseContext, DividerItemDecoration.VERTICAL)
 //        itemDecor.setDrawable(ContextCompat.getDrawable(baseContext, R.drawable.divider)!!)
-//        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.addItemDecoration(itemDecor)
-//        recyclerView.adapter = CustomAdapter(items)
+
 
 //        val layout: TextInputLayout = findViewById(R.id.textInputLayoutSignIn)
 //
@@ -44,4 +98,6 @@ class MainActivity : AppCompatActivity() {
 //        }, 7000)
 
     }
+
 }
+
