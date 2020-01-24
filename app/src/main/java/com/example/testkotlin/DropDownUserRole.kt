@@ -21,8 +21,8 @@ class DropDownUserRole(var context: Context?,var view: View?) : PopupMenu(contex
         recycler.setHasFixedSize(true)
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-        var list: UserRole
-        recycler.adapter = CustomAdapter(list.initList())
+//        var list: UserRole
+//        recycler.adapter = CustomAdapter(list.initList())
 
 
    }
