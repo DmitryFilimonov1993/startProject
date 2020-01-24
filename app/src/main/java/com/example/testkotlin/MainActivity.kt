@@ -3,8 +3,11 @@ package com.example.testkotlin
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_log_in.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,21 +17,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.test_recycler)
 
+
+        editRole.setOnClickListener {  }
+
+
+        fun showUserRole(){
+
+           val menu = DropDownUserRole(this)
+            menu.
+        }
+//        val itemDecor = DividerItemDecoration(baseContext, DividerItemDecoration.VERTICAL)
+//        itemDecor.setDrawable(ContextCompat.getDrawable(baseContext, R.drawable.divider)!!)
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = CustomAdapter(init)
+//        recyclerView.addItemDecoration(itemDecor)
+        recyclerView.adapter = CustomAdapter(items)
 
 
- fun init() : List<UserRole> {
-            val items = listOf(
-                UserRole("Admin"),
-                UserRole("Manager"),
-                UserRole("Developer"),
-                UserRole("Petr")
 
-            )
-            return items
-        }
+
 
 
 
