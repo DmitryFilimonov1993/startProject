@@ -3,7 +3,7 @@
 
     <dimen name="gap_from_ed_text"> 7dp </dimen>
     <dimen name="gap_from_roleName"> 5dp </dimen>
-    <dimen name="height_popup_window"> 140dp </dimen>
+    <dimen name="height_popup_window"> 160dp </dimen>
 
 
 </resources>

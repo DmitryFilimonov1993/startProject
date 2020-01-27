@@ -1,68 +1,55 @@
 package com.example.testkotlin
 
-import android.content.Context
-import android.graphics.ColorFilter
-import android.graphics.PixelFormat
 import android.os.Bundle
-import android.text.Editable
-import android.view.Gravity
-import android.view.LayoutInflater
+import android.os.Handler
 import android.view.View
+
 import android.view.WindowManager
-import android.widget.LinearLayout
-import android.widget.PopupMenu
+
 import android.widget.PopupWindow
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.AppCompatEditText
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.fragment_log_in.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.transition.FragmentTransitionSupport
 
+import com.google.android.material.textfield.TextInputLayout
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_log_in)
+        setContentView(R.layout.activity_main)
 
         val listUser = listOf("User", "Manager", "HR", "Developer", "Testo", "Admin")
+        val listUserEmpty : List<String>? = null
 
-        var editViewUserRole : AppCompatEditText = findViewById(R.id.editRole)
 
-        editViewUserRole.setOnClickListener {
+       var fragment : SignInFragment? = null
+        var fragmentTransition : FragmentTransaction = supportFragmentManager.beginTransaction()
+}
 
-            val popupWindow = PopupWindow()
+    private fun listUserInit(list: List<String>?, view: View){
 
-            popupWindow.width = findViewById<TextInputLayout>(R.id.textInputLayoutChooseRole).width
-            popupWindow.softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
-            popupWindow.init(this, listUser, object :CustomAdapter.RoleSelectedListener{
-                override fun onUserSelected(position: Int, listRole: List<String>) {
-                    editViewUserRole.setText(listRole[position])
-                    popupWindow.dismiss()
-                }
-            })
-            popupWindow.showAsDropDown(editViewUserRole,0,resources.getDimensionPixelSize(R.dimen.gap_from_ed_text))
+        if(null == list)
+        {
+            val layout: TextInputLayout = findViewById(R.id.textInputLayoutChooseRole)
+            layout.isEnabled = false
+            view as AppCompatEditText
+            view.setText("")
+            layout.setAnError("Error validate of role", R.drawable.shape_background_error)
+            Handler().postDelayed({
+                layout.hideAnError(R.drawable.shape_background)
+                layout.isEnabled = true
+            }, 7000)
+
+
+        }
+        else {
+            view as AppCompatEditText
+            view.setText(list[0])
         }
 
+    }
 }
-
-//        val itemDecor = DividerItemDecoration(baseContext, DividerItemDecoration.VERTICAL)
-//        itemDecor.setDrawable(ContextCompat.getDrawable(baseContext, R.drawable.divider)!!)
-
-
-//        val layout: TextInputLayout = findViewById(R.id.textInputLayoutSignIn)
-//
-//        layout.setAnError("Pizdec, vse slomalos", R.drawable.shape_background_error)
-//        Handler().postDelayed({
-//            layout.hideAnError(R.drawable.shape_background)
-//        }, 7000)
-
-}
-

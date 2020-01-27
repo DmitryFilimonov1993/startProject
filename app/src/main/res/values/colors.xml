@@ -10,4 +10,5 @@
     <color name="green">#23EB00</color>
     <color name="orange">#EBB800</color>
     <color name="colorError">#EB0000</color>
+    <color name="colorScrollBar">#76828A</color>
 </resources>
