@@ -56,6 +56,7 @@
     <style name="style_input_text_role" parent="TextAppearance.AppCompat">
 
         <item name="android:fontFamily">@font/ubuntu_m</item>
+        <item name="android:background">@drawable/selector_row</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">15dp</item>
         <item name="android:minHeight">40dp</item>

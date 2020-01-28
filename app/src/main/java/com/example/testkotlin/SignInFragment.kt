@@ -1,10 +1,7 @@
 package com.example.testkotlin
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.*
 import android.widget.PopupWindow
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.Fragment
@@ -37,7 +34,7 @@ class SignInFragment : Fragment() {
                     width = view.findViewById<TextInputLayout>(R.id.textInputLayoutChooseRole).width
                     softInputMode = WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
 
-                    init(it, listUser){
+                    init(it, listUser) {
                         editViewUserRole.setText(it)
                         this@apply.dismiss()
                     }

@@ -12,8 +12,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_height="wrap_content"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
 
     android:background="@color/colorCustom">
 
@@ -44,8 +44,8 @@
 
         style="@style/style_input_text_layout"
 
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_width="0dp"
 
         android:layout_marginTop="57dp"
         android:layout_marginEnd="16dp"
@@ -60,8 +60,8 @@
 
             style="@style/input_email"
 
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_width="match_parent"
 
             android:paddingEnd="8dp"
             android:paddingStart="8dp"
