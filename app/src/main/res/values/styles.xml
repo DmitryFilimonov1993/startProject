@@ -32,9 +32,6 @@
 
     </style>
 
-
-
-
     <style name="black_text_style" parent="Widget.AppCompat.TextView">
 
         <item name="android:textSize">20dp</item>
@@ -50,8 +47,6 @@
         <item name="errorTextAppearance">@style/hint_error</item>
 
     </style>
-
-
 
     <style name="style_input_text_role" parent="TextAppearance.AppCompat">
 
@@ -85,7 +80,6 @@
         <item name="android:fontFamily">@font/ubuntu_m</item>
         <item name="android:textColor">@color/colorError</item>
 
-
     </style>
 
     <style name="style_recycler">
@@ -101,8 +95,7 @@
         <item name="android:fontFamily">@font/ubuntu_m</item>
 
     </style>
-
-
+    
     <style name="input_email" parent="Widget.AppCompat.EditText">
 
         <item name="android:maxLength">70</item>

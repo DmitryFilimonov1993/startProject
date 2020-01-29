@@ -9,7 +9,6 @@ import com.google.android.material.textfield.TextInputLayout
 
 class SignInFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -19,9 +18,11 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+            /**
+            listUser has to be obtained from server
+             */
         val listUser = listOf("User", "Manager", "HR", "Developer", "Testo", "Admin")
         val listUserEmpty: List<String>? = null
-
 
         val editViewUserRole: AppCompatEditText = view.findViewById(R.id.editRole)
 
